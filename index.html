@@ -1,59 +1,154 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Clojure Transducer will seduce ya</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-			  <section>
-                            <h1>DISCLAIMER</h1>
-                            <div class="fragment">
-                              <p>This talk contains scenes from the Rocky Horror Picture Show</p>
-                            </div>
-                            <div class="fragment">
-                              <p>If you have no idea what I'm talking about I'm (partially) sorry for the next 5 minutes.</p>
-                            </div>
-                          </section>
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement( 'link' );
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section>
+          <h1>DISCLAIMER</h1>
+          <div class="fragment">
+            <p>This talk contains scenes from the Rocky Horror Picture Show</p>
+          </div>
+          <div class="fragment">
+            <p>If you have no idea what I'm talking about I'm (kind of) sorry for the next 5 minutes.</p>
+          </div>
+        </section>
 
-			  <section>Slide 2</section>
-			</div>
-		</div>
+	<section>...</section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <section><img src="../img/docs-map.png"></section>
+        <section><img src="../img/docs-map-h.jpg"></section>
+        <section><img src="../img/docs-filter.png"></section>
+        <section><img src="../img/docs-filter-h.jpg"></section>
+        <section><img src="../img/docs-remove.png"></section>
+        <section><img src="../img/docs-remove-h.jpg"></section>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+        <section><h3>What's a transducer?</h3></section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+        <section><video src="../web-m/seduce-ya.webm" data-autoplay></video></section>
+
+        <section data-background-image="../img/intro-1.jpg"></section>
+        <section data-background-image="../img/intro-2.jpg"></section>
+        <section data-background-image="../img/intro-3.jpg"></section>
+
+        <section><video src="../web-m/transport-device.webm" data-autoplay></video></section>
+
+        <section><h3>Not quite</h3></section>
+
+        <section><img src="../img/so.png"></section>
+
+        <section>
+          <img src="../img/grok.png">
+          <img src="../img/grok-leo.png" class="fragment">
+        </section>
+
+        <section><h3>Get to the point!</h3></section>
+
+        <section><pre><code>(= transduce (+ reduce transform)) ;; not actual Clojure code</code></pre>
+
+          <small><code>transduce = reduce + transform</code></small>
+        </section>
+
+        <section>
+          <h3>Transducers</h3>
+          <ul>
+            <li class="fragment">are blueprints</li>
+            <li class="fragment">of functions that work on sequences</li>
+            <li class="fragment">that are ignorant of the sequence</li>
+          </ul>
+        </section>
+
+        <section>
+          <p>Every function that operates on a sequence implements a transducer.</p>
+        </section>
+
+        <section><p>The transducer is the blueprint that is returned if that function is not given a sequence to operate on.</p></section>
+
+        <section><p>Because the function knows what to do with a sequence (if it had one).</p></section>
+
+        <section>
+          <h3>Ok, so what can we do with it?</h3>
+        </section>
+
+        <section>
+          <img src="../img/what-can-you-do.png"><br>
+          <cite>~ Rich Hickey</cite>
+        </section>
+
+        <section><p>Mostly you compose abstract functions for sequences.</p></section>
+
+        <section>
+          <img src="../img/so-answer.png">
+        </section>
+
+        <section>
+          <p>If you're still not sure what a transducer is, don't worry.</p>
+        </section>
+
+        <section><video src="../web-m/mental-mindfuck.webm" data-autoplay></video></section>
+        <section>
+          <h1>Fin</h1>
+          <h3>Thank you!</h3>
+        </section>
+
+        <section>
+          <h3>Refernces and such</h3>
+          <ul>
+            <li><a href="https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms#26322910">Stack Overflow question</a></li>
+            <li><a href="http://blog.cognitect.com/blog/2014/8/6/transducers-are-coming">Rich Hickey's post on Transducers</a></li>
+            <li><a href="http://clojure.com/blog/2012/05/15/anatomy-of-reducer.html">About reducers</a></li>
+            <li><a href="http://blog.cognitect.com/blog/2015/6/30/clojure-17?rq=transducers">Clojure 1.7 release notes</a></li>
+
+            <li><a href="https://ianrumford.github.io/clojure/transducers/reducers/2014/08/08/Some-trivial-examples-of-using-Clojure-Transducers.html">a blog post</a></li>
+
+            <li><a href="http://conscientiousprogrammer.com/blog/2014/08/07/understanding-cloure-transducers-through-types/">another blog post (contains Haskell)</a></li>
+
+            <li><a href="https://bendyworks.com/blog/transducers-clojures-next-big-idea">another blog post</a></li>
+
+            <li><a href="http://ignaciothayer.com/post/Transducers-Are-Fundamental/">yet another blog post</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+     // More info https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+       history: true,
+       transition: 'none', // none/fade/slide/convex/concave/zoom
+       backgroundTransition: 'none',
+
+       // More info https://github.com/hakimel/reveal.js#dependencies
+       dependencies: [
+	 { src: 'plugin/markdown/marked.js' },
+	 { src: 'plugin/markdown/markdown.js' },
+	 { src: 'plugin/notes/notes.js', async: true },
+	 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+       ]
+     });
+    </script>
+  </body>
 </html>

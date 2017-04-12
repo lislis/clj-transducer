@@ -37,9 +37,6 @@ http://blog.cognitect.com/blog/2014/8/6/transducers-are-coming
 
 
 
-http://blog.cognitect.com/blog/2014/8/6/transducers-are-coming
-
-
 http://clojure.com/blog/2012/05/15/anatomy-of-reducer.html
 
 http://blog.cognitect.com/blog/2015/6/30/clojure-17?rq=transducers
