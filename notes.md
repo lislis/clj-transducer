@@ -54,6 +54,9 @@ http://conscientiousprogrammer.com/blog/2014/08/07/understanding-cloure-transduc
 https://bendyworks.com/blog/transducers-clojures-next-big-idea
 
 
+http://ignaciothayer.com/post/Transducers-Are-Fundamental/
+
+
 Transducer = transform + reducer
 
 
