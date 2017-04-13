@@ -9,7 +9,8 @@ I hope you can enjoy it nonetheless.
 
 Screenshots from clojuredocs saying `or returns a transducer`
 
-clip seduce-ya.mov
+clip seduce-ya.mo
+v
 
 intro slides 1 - 3
 
