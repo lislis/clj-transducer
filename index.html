@@ -24,19 +24,24 @@
   <body>
     <div class="reveal">
       <div class="slides">
-	<section>
+        <section>
+          <p>Hi, I'm Lisa.</p>
+          <p class="fragment">I work at Travis CI.</p>
+          <p class="fragment">This talk has nothing to do with that.</p>
+        </section>
+        <section>
+          <p>This is a Clojure talk.</p>
+        </section>
+        <section>
           <h1>DISCLAIMER</h1>
           <div class="fragment">
             <p>This talk contains scenes from the Rocky Horror Picture Show</p>
-          </div>
-          <div class="fragment">
-            <p>If you have no idea what I'm talking about I'm (kind of) sorry for the next 5 minutes.</p>
           </div>
         </section>
 
 	<section>...</section>
 
-        <section><img src="mg/docs-map.png"></section>
+        <section><img src="img/docs-map.png"></section>
         <section><img src="img/docs-map-h.jpg"></section>
         <section><img src="img/docs-filter.png"></section>
         <section><img src="img/docs-filter-h.jpg"></section>
@@ -66,7 +71,7 @@
 
         <section><pre><code>(= transduce (+ reduce transform)) ;; not actual Clojure code</code></pre>
 
-          <small><code>transduce = reduce + transform</code></small>
+          <small><code>transduce == reduce + transform</code></small>
         </section>
 
         <section>
@@ -82,9 +87,9 @@
           <p>Every function that operates on a sequence implements a transducer.</p>
         </section>
 
-        <section><p>The transducer is the blueprint that is returned if that function is not given a sequence to operate on.</p></section>
+        <section><p>The transducer is the transformative action that is returned if that same function is not given a sequence to operate on.</p></section>
 
-        <section><p>Because the function knows what to do with a sequence (if it had one).</p></section>
+        <section><p>The transducer knows what to do with a sequence<br> (if it had one).</p></section>
 
         <section>
           <h3>Ok, so what can we do with it?</h3>
@@ -95,10 +100,23 @@
           <cite>~ Rich Hickey</cite>
         </section>
 
-        <section><p>Mostly you compose abstract functions for sequences.</p></section>
+        <section><p>Mostly you compose dataflows for sequences.</p></section>
 
         <section>
           <img src="img/so-answer.png">
+        </section>
+
+        <section>
+          <p>Why is this useful?</p>
+        </section>
+
+        <section>
+          <p>Clojure's evaluation is lazy.</p>
+          <p class="fragment">Transducers are not!</p>
+        </section>
+
+        <section>
+          <p>Compose a transducer when you need to perform multiple operations on a large finite dataset.</p>
         </section>
 
         <section>
@@ -112,7 +130,7 @@
         </section>
 
         <section>
-          <h3>Refernces and such</h3>
+          <h3>References and such</h3>
           <ul>
             <li><a href="https://stackoverflow.com/questions/26317325/can-someone-explain-clojure-transducers-to-me-in-simple-terms#26322910">Stack Overflow question</a></li>
             <li><a href="http://blog.cognitect.com/blog/2014/8/6/transducers-are-coming">Rich Hickey's post on Transducers</a></li>
